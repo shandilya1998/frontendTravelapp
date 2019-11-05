@@ -1,6 +1,6 @@
 import React ,{Component} from "react";
 import styles from "../assets/styles";
-import { Text, ScrollView, View, Image, Dimensions, TouchableOpacity } from "react-native";
+import { Text, ScrollView, View, Image, Dimensions, TouchableOpacity, ImageBackground } from "react-native";
 
 
 
@@ -17,26 +17,25 @@ class CardItem extends Component{
     //check if the images are properly returned. Check the output of the function getImage function
     render(){
         return(
-            <View style = {{backgroundColor : "white", flexDirection : "column", justifyContent : "center", alignItems : "center" , flex : 1}}>
-                <View style = {{flex : 2, backgroundColor : "red"}}>
-                    <Image source = {require("../assets/data/images-dummy-place/EmpireState-Paidfor-Stock-Image-cropped.1506069358.6425.jpg")} resizeMode = "center" />
-                </View>
-                <View style = {{flex : 1 ,flexDirection : "column" ,justifyContent : "center"}}>
-                    <Text>Empire State Building</Text>
-                </View>
-                <View style = {{flex : 1}}>
-                    <Text>Tallest bulding in New York till 1970 and much more</Text>
-                </View>
-                <View style = {{flex : 1, flexDirection : "row", justifyContent : "space-between", alignItems : "center", marginVertical : 20, backgroundColor : "green"}}>
-                    <TouchableOpacity>
-                        <Image source = {require("../assets/images/icons/icons8-thumbs-down-26.png")} />
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress = {this.props.navigation.navigate("MoreInfoScreen")}>
-                        <Image source = {require("../assets/images/icons/icons8-info-26.png")} />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Image source = {require("../assets/images/icons/icons8-two-hearts-26.png")} />
-                    </TouchableOpacity>
+            <View style = {styles.cardContainer}>
+                <View styles = {styles.ImageContainer}>
+                    <ImageBackground source = {{uri : this.props.image_url}} style = {styles.ImagePlaces} resizeMethod = 'auto'>
+                        <View style = {{flex : 1, flexDirection : 'row', justifyContent : 'space-around', padding : 20}}>
+                            <TouchableOpacity>
+                                <Image source = {require("../assets/images/icons/icons8-thumbs-down-52.png")} />
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress = {this.props.navigation.navigate("MoreInfoScreen")}>
+                                <Image source = {require("../assets/images/icons/icons8-info-52.png")} />
+                            </TouchableOpacity>
+                            <TouchableOpacity>
+                                <Image source = {require("../assets/images/icons/icons8-two-hearts-52.png")} />
+                            </TouchableOpacity>
+                        </View>
+                    </ImageBackground>
+                    <View style = {{flex : 0.15 ,flexDirection : "column" ,justifyContent : 'center', alignItems : 'center'}}>
+                        <Text style = {{fontSize : 22}}>{this.props.name}Text here</Text>
+                        <Text style = {{fontSize : 15}}>{this.props.description} Text here</Text>
+                    </View>
                 </View>
             </View>
         );

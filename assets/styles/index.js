@@ -186,7 +186,7 @@ export default StyleSheet.create({
     flex : 1,
     backgroundColor : "blue",
   },
-  //PLACES DIRECTORY SCREEN
+  //PLACES DIRECTORY SCREEN V1
   placesDirectoryScreen : {
     flex : 1,
     flexDirection : "column",
@@ -358,6 +358,29 @@ export default StyleSheet.create({
     flex : 1,
     flexDirection : 'row',
     justifyContent : 'space-between', 
-    alignItems : 'center'
+    alignItems : 'center',
   },
+  // PLACES DIRECTORY SCREEN V2
+  cardContainer : {
+    flex : 1, 
+    alignItems : 'center',
+    justifyContent : 'center',
+    height : DIMENSION_HEIGHT*0.75,
+  },
+  ImagePlaces : {
+    flex : 1,
+    resizeMode : 'repeat',
+    flexDirection : 'row',
+    width : DIMENSION_WIDTH*0.9,
+    alignItems : 'flex-end',
+    justifyContent : 'center',
+    borderWidth : 2,
+    borderColor : BLACK, 
+    overflow : 'hidden',
+  },
+  ImageContainer : {
+    flex : 1,
+    justifyContent : 'center', 
+    alignItems : 'center', }
+
 });

@@ -25,7 +25,7 @@ export default createStackNavigator(
 
   },
   {
-    initialRouteName : 'ProfileScreen',
+    initialRouteParams : 'ProfileScreen',
     },
 
 );

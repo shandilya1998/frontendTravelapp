@@ -12,7 +12,7 @@ export default createStackNavigator(
     PreviousTrips : {screen : PreviousTrips}
   },
   {
-    initialRouteName : 'TripsScreen'
+    initialRouteParams : 'TripsScreen'
     },
 
 );

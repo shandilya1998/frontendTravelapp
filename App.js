@@ -8,6 +8,10 @@ const App = createBottomTabNavigator({
   Trips : TripsScreens,
   Places : PlacesDirectoryScreens,
   Profile : ProfileScreens
-});
+},
+{
+  initialRouteParams : 'Places'
+}
+);
 
 export default createAppContainer(App);
