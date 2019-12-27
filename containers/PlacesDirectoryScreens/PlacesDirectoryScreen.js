@@ -43,7 +43,7 @@ class PlacesDirectoryScreen_v2 extends Component{
 
     _fetchAllPlaces = () => {
         const { page } = this.state;
-        const URL = '/places?page=${page}&per_page=10';
+        const URL = '/load?page=${page}&per_page=10&filter={%27city%27%3A%27New%20York%27}';
         this.service.getData().then(response => {
             this.setState((prevState, nextProps) => ({
               data:
