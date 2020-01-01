@@ -12,7 +12,9 @@
   "dependencies": {
     "core-js": "^3.6.1",
     "glamorous-native": "^2.0.0",
+    "mem": "^6.0.1",
     "react": "16.9.0",
+    "react-is": "^16.12.0",
     "react-native": "0.61.5",
     "react-native-elements": "^1.2.7",
     "react-native-fbsdk": "^1.1.1",
@@ -24,6 +26,8 @@
     "react-navigation": "^4.0.10",
     "react-navigation-stack": "^1.10.3",
     "react-navigation-tabs": "^2.6.2",
+    "react-redux": "^7.1.3",
+    "redux": "^4.0.5",
     "typescript": "^3.7.4"
   },
   "devDependencies": {
