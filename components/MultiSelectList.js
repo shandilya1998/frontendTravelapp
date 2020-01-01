@@ -34,5 +34,5 @@ class MultiSelectList extends Component{
     }
   }
   
-  export default MultiSelectList;
+export default MultiSelectList;
   

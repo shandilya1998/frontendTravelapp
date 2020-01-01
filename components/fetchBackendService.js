@@ -6,7 +6,7 @@ class fetchService{
     }
 
     async  getData() {
-        let response = await fetch('https://192.168.0.112:5000/' + this.params['endpoint'], this.parseRequest(this.params));
+        let response = await fetch('https://127:0.0.1:5000/' + this.params['endpoint'], this.parseRequest(this.params));
         return response;
     }
 

@@ -36,6 +36,8 @@ target 'frontendTravelapp' do
 
   pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
 
+  pod 'react-native-fbsdk', :path => '../node_modules/react-native-fbsdk'
+
   target 'frontendTravelappTests' do
     inherit! :search_paths
     # Pods for testing

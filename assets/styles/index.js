@@ -381,6 +381,10 @@ export default StyleSheet.create({
   ImageContainer : {
     flex : 1,
     justifyContent : 'center', 
-    alignItems : 'center', }
+    alignItems : 'center', },
+  // COMPONENT - ITINERARY LIST
+  itineraryListView : {
+  
+  },
 
 });

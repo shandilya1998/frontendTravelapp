@@ -1,3 +1,7 @@
+import React, {Component} from 'react';
+import {View, TouchableOpacity, FlatList} from 'react-native';
+
+
 class InfiniteScroll extends Component{
     constructor(props){
         super(props);
@@ -34,3 +38,5 @@ class InfiniteScroll extends Component{
     }
 
 }
+
+export default InfiniteScroll;
