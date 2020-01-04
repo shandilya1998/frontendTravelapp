@@ -90,7 +90,7 @@ class ItineraryList extends Component{
 			<View style={styles.screen}>
                         	<View style = {styles.inputView}>
 					<GooglePlacesAutocomplete
-        					placeholder='Enter Place here'
+        					placeholder='Search for a place here'
         					minLength={2} 
         					autoFocus={false}
         					fetchDetails={true}
@@ -119,10 +119,10 @@ class ItineraryList extends Component{
 					style = {styles.ItineraryListFlatList]
 					data = this.state.places
 					keyExtractor = {(item, index) => item.idplace}
-					renderItem = {(rowdata) = > this.RenderPlaceTile}
+					renderItem = {(rowData) = > this.RenderPlaceTile(rowData)}
 					ItemSeparatorComponent = {() => this.FlatListSeparator
 					horizontal = this.props.horizontal}
-					onEndReached = {this.props.onEndReached}
+					onEndReached = {this.props.onEndReach
 					onRefresh = {this.props.onRefresh}
 					/>				
 			</View>
