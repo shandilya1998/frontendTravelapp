@@ -1,28 +1,30 @@
 import React, {Component} from 'react'
 
 
-export const FETCH_PLACES_PENDNIG = 'FETCH_PRODUCTS_PENDING';
-export const FETCH_PLACES_SUCCESS = 'FETCH_PLACES_SUCCESS';
-export const FETCH_PLACES_ERROR = 'FETCH_PLACES_ERROR';
+export const FETCH_PLACE_SUCCESS = 'trvl_app_database_event_fetch_place_from_database_success';
+export const FETCH_PLACE_FAILURE = 'trvl_app_database_event_fetch_place_from_database_failure';
+export const FETCH_PLACE_PENDING = 'trvl_app_database_event_fetch_place_from_database_pending';
 
-function fetchPlacesPendning(){
+function fetchPlacesPending(){
 	return({
-		type : FETCH_PLACES_PENDING
+		type : FETCH_PLACE_PENDING
 	});
 }
 
-function fetchPlacesSuccess(places){
-	returnn({
-		type : FETCH_PLACES_SUCCESS,
-		places : places
+function fetchPlacesSuccess(place){
+	return({
+		type : FETCH_PLACE_SUCCESS,
+		place : place
 	});
 }
 
-function fetchPlacesError(error){
+function fetchPlaceError(error){
 	return({
-		type : FETCH_PLACES_ERROR,
+		type : FETCH_PLACE_ERROR,
 		error : error
 	});
 }
+
+
 
 
