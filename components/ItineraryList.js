@@ -11,7 +11,7 @@ class ItineraryList extends Component{
 		this.state  = {
 			places : [],
 			inputPlace = {}
-		}
+		};
 
 	}
 
