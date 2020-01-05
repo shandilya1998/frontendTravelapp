@@ -50,7 +50,7 @@ class ItineraryList extends Component{
 		return t[0];
 	}
 
-	function RenderPlaceTile(name, image){
+	function renderPlaceTile(name, image){
 		return(
 			<View>
 				<ImageBackground
@@ -119,7 +119,7 @@ class ItineraryList extends Component{
 					style = {styles.ItineraryListFlatList]
 					data = this.state.places
 					keyExtractor = {(item, index) => item.idplace}
-					renderItem = {(rowData) = > this.RenderPlaceTile(rowData)}
+					renderItem = {(rowData) = > this.renderPlaceTile(rowData)}
 					ItemSeparatorComponent = {() => this.FlatListSeparator
 					horizontal = this.props.horizontal}
 					onEndReached = {this.props.onEndReach
