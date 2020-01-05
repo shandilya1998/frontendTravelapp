@@ -62,7 +62,7 @@ class ItineraryList extends Component{
 						</View>
 				</ImageBackground>
 			</View>
-		)
+		);
 	}
 
 	function onPress(){
