@@ -1,8 +1,10 @@
 import React ,{Component} from "react";
 import styles from "../assets/styles";
 import { Text, ScrollView, View, Image, Dimensions, TouchableOpacity, ImageBackground } from "react-native";
+import {withNavigation} from 'react-navigation';
 
-
+// refer to the following link for how props were passed to this component
+// https://reactnavigation.org/docs/en/connecting-navigation-prop.html
 
 //the props passed to CardItem are the elements of the response from places API
 class CardItem extends Component{
@@ -42,4 +44,4 @@ class CardItem extends Component{
     }
 }
 
-export default CardItem;
+export default withNavigation(CardItem);
