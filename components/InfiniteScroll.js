@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {View, TouchableOpacity, FlatList} from 'react-native';
-
+import {withNavigation} in 'react-navigation';
 
 class InfiniteScroll extends Component{
     constructor(props){
@@ -9,7 +9,7 @@ class InfiniteScroll extends Component{
 
     render(){
         return(
-            <FlatList contentContainerStyle={{
+            <FlatList contentContainerStyle={
                                              flex: 1,
                                              flexDirection: 'column',
                                              height: '100%',
@@ -39,4 +39,4 @@ class InfiniteScroll extends Component{
 
 }
 
-export default InfiniteScroll;
+export default withNavigation(InfiniteScroll);
