@@ -26,10 +26,13 @@ class TripsStack extends Component{
 	}
 }
 
-const mapStoreToProps = (state) => {
+const mapStateToProps = (state) => {
 	const {previousTrips, plannedTrips, currentItinerary} = state
 	return {previousTrips, plannedTrips, currentItineray}
 };
 
+//Documentation for connect() https://react-redux.js.org/api/connect
+//The results of mapStateToProps must be a plain object, 
+//which will be merged into the wrapped component’s props.
 export default connect(mapStateToProps)(TripsStack);
 
