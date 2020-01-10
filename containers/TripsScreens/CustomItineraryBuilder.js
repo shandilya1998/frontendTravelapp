@@ -40,5 +40,11 @@ class CustomItineraryBuilder extends Component {
 	}
 }
 
-export default CustomItineraryBuilder;
+const mapStoreToProps = (state) => {
+	const {} = state;
+	return {};
+
+}; 
+
+export default connect(mapStateToProps)(CustomItineraryBuilder);
 

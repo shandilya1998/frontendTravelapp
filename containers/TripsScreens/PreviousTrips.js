@@ -8,6 +8,7 @@ import {
   Button,
 } from 'react-native';
 import styles from '../../assets/styles';
+import {connect} from 'react-redux';
 
 class PreviousTrips extends Component {
   constructor(props){
@@ -36,5 +37,11 @@ static navigationOptions = ({ navigation }) => ({
   }
 }
 
-export default PreviousTrips;
+const mapStateToProps = (state) => {
+	const {previousTrips} = state;
+	return {previousTrips};
+	
+};
+
+export default connect(mapStateToProps)(PreviousTrips);
 

@@ -8,6 +8,7 @@ import {
   Button,
 } from 'react-native';
 import styles from '../../assets/styles';
+import {connect} from 'react-redux';
 
 class PlannedTrips extends Component {
   
@@ -33,5 +34,11 @@ class PlannedTrips extends Component {
   }
 }
 
-export default PlannedTrips;
+const mapStateToProps = (state) => {
+	const {plannedTrips} = state;
+	return {plannedTrips};
+
+};
+
+export default connect(mapStateToProps)(PlannedTrips);
 
