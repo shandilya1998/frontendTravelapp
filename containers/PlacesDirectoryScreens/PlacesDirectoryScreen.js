@@ -76,6 +76,7 @@ class PlacesDirectoryScreen_v2 extends Component{
         headerTitleStyle : styles.appTitleText,
         
       });
+
     // when the backend is ready put the JSX in infinite scroll in place of the cardItem here 
     render(){
         return (

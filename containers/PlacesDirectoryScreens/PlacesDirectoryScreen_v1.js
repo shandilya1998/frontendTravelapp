@@ -105,8 +105,7 @@ class PlacesDirectoryScreen extends Component{
     this.props.navigation.navigate('MoreInfoScreen');
   }
 
-  renderCards(place, navigation) {
-    
+  renderCards(place, navigation) { 
     return (
       <Card containerStyle = {styles.cardContainerStyle} 
             wrapperStyle = {styles.cardWrapperStyle}>
