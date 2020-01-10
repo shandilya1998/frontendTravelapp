@@ -3,8 +3,9 @@ import TripsScreen from './TripsScreen';
 import CustomItineraryBuilder from './CustomItineraryBuilder';
 import PlannedTrips from './PlannedTrips';
 import PreviousTrips from './PreviousTrips'
+import {connect} from 'react-redux';
 
-export default createStackNavigator(
+let TripsStackNavigator = createStackNavigator(
   {
     TripsScreen: { screen: TripsScreen },
     CustomItineraryBuilder: { screen: CustomItineraryBuilder },
@@ -16,4 +17,19 @@ export default createStackNavigator(
     },
 
 );
+
+class TripsStack extends Component{
+	render(){
+		return(
+			<TripsStackNavigator />
+		);
+	}
+}
+
+const mapStoreToProps = (state) => {
+	const {previousTrips, plannedTrips, currentItinerary} = state
+	return {previousTrips, plannedTrips, currentItineray}
+};
+
+export default connect(mapStateToProps)(TripsStack);
 
