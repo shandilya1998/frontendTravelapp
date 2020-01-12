@@ -4,7 +4,7 @@ import PlacesDirectoryScreen from "./PlacesDirectoryScreen";
 import MoreInfoScreen from "./MoreInfoScreen";
 
 
-export default createStackNavigator(
+let PlacesDirectoryNavigator = createStackNavigator(
   {
       PlacesDirectoryScreen : {screen : PlacesDirectoryScreen},
       CurrentItineraryScreen : {screen : CurrentItineraryScreen},
@@ -16,3 +16,9 @@ export default createStackNavigator(
 
 );
 
+const mapStateToProps = (state) => {
+	const {currentItinerary} = state;
+	return {currentItinerary};
+};
+
+export default connect(mapStateToProps)(PlacesDirectoryNavigator);

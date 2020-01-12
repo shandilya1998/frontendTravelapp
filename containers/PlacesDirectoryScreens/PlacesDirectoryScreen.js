@@ -85,4 +85,8 @@ class PlacesDirectoryScreen_v2 extends Component{
     }
 }
 
-export default PlacesDirectoryScreen_v2;
+const mapStateToProps = (state) => {
+	return {};
+};
+
+export default connect(mapStateToProps)(PlacesDirectoryScreen_v2);

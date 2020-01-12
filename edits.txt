@@ -3,4 +3,6 @@
 3. Define onEndReached and onRefresh functions in CustomItineraryBuilder
 4. Customize react-native-google-places-autocomplete pacakge to send all the requests to backend, which will add the secret key to the query and relay it to google places API and relay back the result
 5. Correct the flex ratio in ItineraryList for better placement of things
-6. Plan all redux actions to be added to the app and see how it is related to instrumentation of the app 
+6. Plan all redux actions to be added to the app and see how it is related to instrumentation of the app 7. Show current location on map in the app, where the user sets location
+8. Get google maps API key
+

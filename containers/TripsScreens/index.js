@@ -27,8 +27,8 @@ class TripsStack extends Component{
 }
 
 const mapStateToProps = (state) => {
-	const {previousTrips, plannedTrips, currentItinerary} = state
-	return {previousTrips, plannedTrips, currentItineray}
+	const {previousTrips, plannedTrips} = state;
+	return {previousTrips, plannedTrips};
 };
 
 //Documentation for connect() https://react-redux.js.org/api/connect

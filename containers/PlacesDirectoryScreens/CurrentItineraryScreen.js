@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Text, View} from "react-native";
+import {Text, View, FlatList} from "react-native";
 import styles from "../../assets/styles"
 
 class CurrentItineraryScreen extends Component{
@@ -14,10 +14,15 @@ class CurrentItineraryScreen extends Component{
     render(){
         return(
             <View>
-                <Text>Current Itinerary Screen</Text>
+                <FlatList data = this.props.currentItinerary/>
             </View>
         );
     }
 }
 
-export default CurrentItineraryScreen
+const mapStateToProps = (state) => {
+	const {currentItinerary} = state;
+	return {currentItinerary};
+};
+
+export default connect(mapStateToProps)(CurrentItineraryScreen);

@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {Text, View} from "react-native";
 import styles from "../../assets/styles";
+import Map from '../../components/Map';
 
 class SetLocationScreen extends Component{
 
@@ -16,6 +17,7 @@ class SetLocationScreen extends Component{
             <View>
                 <Text>Set Location here</Text>
             </View>
+	    <Map />
         );
     }
 }

@@ -11,6 +11,7 @@ import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import com.airbnb.android.react.maps.MapsPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -72,5 +73,12 @@ public class MainApplication extends Application implements ReactApplication {
         e.printStackTrace();
       }
     }
+  @Override
+  protected List<ReactPackage> getPackages() {
+    return Arrays.<ReactPackage>asList(
+      new MainReactPackage(),
+      new MapsPackage()
+   );
+  }
   }
 }

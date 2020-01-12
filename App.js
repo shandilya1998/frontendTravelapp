@@ -30,7 +30,7 @@ export default class App extends Component{
 			plannedTrips : [],
 			previousTrips : [],
 			currentItinearary : [],
-			profile : {}
+			profile : {},
 		}
 	}
 
