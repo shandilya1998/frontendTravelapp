@@ -39,10 +39,10 @@ export default class App extends Component{
 			<Provider store = {store}>
 				<View>
 					<Tab
-						plannedTrips = this.state.plannedTrips,
-						previousTrips = this.state.previousTrips,
-						currentItinerary = this.state.currentItinerary,
-						profile = this.state.profile
+						plannedTrips = {this.state.plannedTrips}
+						previousTrips = {this.state.previousTrips}
+						currentItinerary = {this.state.currentItinerary}
+						profile = {this.state.profile}
 					/>
 				</View>
 			</Provider>

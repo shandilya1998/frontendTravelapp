@@ -5,7 +5,7 @@ import {
 	ImageBackground,
 	Button} from 'react-native';
 import styles from '../../assets/styles';
-import TextBoxItineraryBuilder from '../../components/TextBoxItineraryBuilder';
+//import TextBoxItineraryBuilder from '../../components/TextBoxItineraryBuilder';
 import ItineraryList from '../../components/ItineraryList';
 
 
@@ -31,9 +31,7 @@ class CustomItineraryBuilder extends Component {
           				<View style = {styles.itineraryView}>
 	    					<ItineraryList
 							places = {this.props.places}
-	    						horizontal = false
-	    						onEndReached = 
-	    						onRefresh = />
+	    						horizontal = {false}/>
           				</View>
       			</ImageBackground>
 		);

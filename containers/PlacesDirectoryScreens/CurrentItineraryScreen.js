@@ -14,7 +14,7 @@ class CurrentItineraryScreen extends Component{
     render(){
         return(
             <View>
-                <FlatList data = this.props.currentItinerary/>
+                <FlatList data = {this.props.currentItinerary}/>
             </View>
         );
     }
