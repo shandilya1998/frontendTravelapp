@@ -1,10 +1,7 @@
 import React from "react";
-import {fetchPlacePending, fetchPlaceSuccess, fetchPlaceError} from './actions_v1';
+import {fetchPlacePending, fetchPlaceSuccess, fetchPlaceError} from '../actions/actions_v1';
 
-class fetchService{
-    constructor(props){
-        super(props); //endpoint_params is a list of all data required to perform a request
-    }
+class fetchService {
 
     async  getData() {
         let response = await fetch('https://127:0.0.1:5000/' + this.props['endpoint'], this.parseRequest(this.props));
@@ -44,6 +41,4 @@ export function fetchPlace(idplace){
 	}
 }
 
-
-
-export fetchService;
+export default fetchService;

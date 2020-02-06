@@ -2,7 +2,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import CurrentItineraryScreen from "./CurrentItineraryScreen";
 import PlacesDirectoryScreen from "./PlacesDirectoryScreen";
 import MoreInfoScreen from "./MoreInfoScreen";
-
+import {connect} from 'react-redux';
 
 let PlacesDirectoryNavigator = createStackNavigator(
   {

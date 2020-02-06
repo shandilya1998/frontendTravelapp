@@ -1,3 +1,4 @@
+import React, {Component} from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import TripsScreen from './TripsScreen';
 import CustomItineraryBuilder from './CustomItineraryBuilder';

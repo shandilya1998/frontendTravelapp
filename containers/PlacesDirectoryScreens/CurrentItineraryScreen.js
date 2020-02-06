@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {Text, View, FlatList} from "react-native";
-import styles from "../../assets/styles"
+import styles from "../../assets/styles";
+import {connect} from 'react-redux';
 
 class CurrentItineraryScreen extends Component{
 

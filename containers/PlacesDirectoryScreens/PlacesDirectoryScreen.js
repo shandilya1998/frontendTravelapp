@@ -14,8 +14,9 @@ import { Card, Button } from 'react-native-elements';
 import ItinerarySizeIndicator from '../../components/ItinerarySizeIndicator';
 import CurrentItineraryViewButton from '../../components/CurrentItineraryViewButton';
 import PlacesImageCarousel from '../../components/PlaceImageCarousel';
-import fetchService from '../../components/fetchBackendService'
-import CardItem from '../../components/CardItem'
+import fetchService from '../../components/fetchBackendService';
+import CardItem from '../../components/CardItem';
+import {connect} from 'react-redux';
 
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 const SCREEN_WIDTH = Dimensions.get('window').width;

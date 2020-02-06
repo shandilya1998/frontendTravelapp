@@ -15,7 +15,7 @@ class Map extends Component{
 		return(
 			<View>
 				<MapView
-					initialRegion : this.state.initialRegion
+					initialRegion = {this.state.initialRegion}
 				/>
 			</View>
 		);

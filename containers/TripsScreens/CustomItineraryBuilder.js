@@ -7,7 +7,7 @@ import {
 import styles from '../../assets/styles';
 //import TextBoxItineraryBuilder from '../../components/TextBoxItineraryBuilder';
 import ItineraryList from '../../components/ItineraryList';
-
+import {connect} from 'react-redux';
 
 class CustomItineraryBuilder extends Component {
 	constructor(props){
@@ -38,7 +38,7 @@ class CustomItineraryBuilder extends Component {
 	}
 }
 
-const mapStoreToProps = (state) => {
+const mapStateToProps = (state) => {
 	const {} = state;
 	return {};
 

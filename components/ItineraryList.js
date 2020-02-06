@@ -2,15 +2,15 @@ import React, {Component} from 'react';
 import {View, TouchableOpacity, FlatList, Imagebackground} from 'react-native';
 import styles from '../assets/styles'
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
-import AddPlaceToItineraryButton from 'AddPlaceToItineraryButton';
-import PlanTripButton from 'PlanTripButton';
+//import AddPlaceToItineraryButton from 'AddPlaceToItineraryButton';
+//import PlanTripButton from 'PlanTripButton';
 
 class ItineraryList extends Component{
 	constructor(props){
 		super(props);
 		this.state  = {
 			places : [],
-			inputPlace = {}
+			inputPlace : {}
 		};
 
 	}
@@ -20,13 +20,13 @@ class ItineraryList extends Component{
 	}
 
 
-	function pushPlace(place){
+	pushPlace(place){
 		places = this.state.places;
 		places.push(place);
 		this.setState({places : places});
 	}
 
-	function FlatListItemSeparator() {
+	FlatListItemSeparator() {
 		return (
 			<View style = {
 				{
@@ -38,7 +38,7 @@ class ItineraryList extends Component{
 		);
 	}
 
-	function getPlace(idplace){
+	getPlace(idplace){
 		condition = (id) => { 
 			if (id == idplace) {
 				return true;
@@ -50,13 +50,13 @@ class ItineraryList extends Component{
 		return t[0];
 	}
 
-	function renderPlaceTile(name, image){
+	renderPlaceTile(name, image){
 		return(
 			<View>
 				<ImageBackground
 					style = {styles.ItineraryListTileImageContainer}
 					imageStyle = {styles.ItineraryListTileImage}
-					source = {require(image)}>
+					source = {image}>
 						<View>
 							<Text style = {styles.ItineraryListTileText}>{place}</Text>
 						</View>
@@ -65,28 +65,26 @@ class ItineraryList extends Component{
 		);
 	}
 
-	function onPress(){
-		
-	}
 	
-	function renderAddPlaceToItineraryButton(){
+	renderAddPlaceToItineraryButton(){
 		return(
 			<TouchableOpacity style = {styles.addPlaceToItineraryButtonIcon}>
 				<Image source = {require('../assets/images/icons/add-place-to-itinerary-button-icon.png')}/>
-			</TouchableOpacity/>
+			</TouchableOpacity>
 		);
 	}
 
-	function renderPlanTripButton(){
+	renderPlanTripButton(){
 		return(
 			<TouchableOpacity style = {styles.planTripButton}>
 				<Image source = {require('../assets/images/icons/plan-trip-icon.png')}/>
-			</TouchableOpacity/>
+			</TouchableOpacity>
 		);
 	}
 
 	render(){
 		return(
+		<View>
 			<View style={styles.screen}>
                         	<View style = {styles.inputView}>
 					<GooglePlacesAutocomplete
@@ -94,7 +92,6 @@ class ItineraryList extends Component{
         					minLength={2} 
         					autoFocus={false}
         					fetchDetails={true}
-        					onPress={}
         					query={{
           						key: 'AIzaSyAybzYaBKYlMjUPx-rjUkcSeTXSyFGOXpU',
           						language: 'en'}}
@@ -110,23 +107,25 @@ class ItineraryList extends Component{
         					GooglePlacesDetailsQuery={{
 							fields: ['formatted_address','geometry','place_id','photos','place_id','reviews','website','name', 'opening_hours']
 						}}
-        					renderLeftButton = {() => this.renderAddPlacesToItineraryButton}
-        					renderRightButton = {() => this.renderPlanTripButton}/>
+        					renderLeftButton = {() => this.renderAddPlacesToItineraryButton()}
+        					renderRightButton = {() => this.renderPlanTripButton()}/>
                                 </View>
                         </View>
 			<View style = {styles.itineraryListView}>
 				<FlatList
-					style = {styles.ItineraryListFlatList]
-					data = this.state.places
+					style = {styles.ItineraryListFlatList}
+					data = {this.state.places}
 					keyExtractor = {(item, index) => item.idplace}
-					renderItem = {(rowData) = > this.renderPlaceTile(rowData)}
-					ItemSeparatorComponent = {() => this.FlatListSeparator
-					horizontal = this.props.horizontal}
-					onEndReached = {this.props.onEndReach
+					renderItem = {(rowData) => this.renderPlaceTile(rowData)}
+					ItemSeparatorComponent = {() => this.FlatListSeparator()}
+					horizontal = {this.props.horizontal}
+					onEndReached = {this.props.onEndReach}
 					onRefresh = {this.props.onRefresh}
 					/>				
 			</View>
-			);
+		
+		</View>
+		);
 	
 	}
 }

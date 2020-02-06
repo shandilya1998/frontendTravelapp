@@ -6,8 +6,10 @@ import ProfileScreens from './containers/ProfileScreens';
 import PlacesDirectoryScreens from './containers/PlacesDirectoryScreens';
 import {Provider, connect} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
-import placesReducer from './components/reducer_v1';
-import actions from './components/actions_v1';
+import placesReducer from './reducers/reducer_v1';
+import {initialState} from './reducers/reducer_v1';
+import actions from './actions/actions_v1';
+import * as thunk from 'redux-thunk';
 
 const Tab = createBottomTabNavigator({
   Trips : TripsScreens,
@@ -19,9 +21,13 @@ const Tab = createBottomTabNavigator({
 }
 );
 
-const middlewares = [thunk];
+console.log(thunk);
 
-const store = createStore(placesReducer, applyMiddleWare(...middlewares));
+const middleware = [thunk];
+
+const createStoreWithMiddleware = applyMiddleware(...middleware)
+
+const store = createStoreWithMiddleware(createStore)(placesReducer, initialState);
 
 export default class App extends Component{
 	constructor(props){

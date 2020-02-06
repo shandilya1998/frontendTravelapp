@@ -17,7 +17,6 @@ class SetLocationScreen extends Component{
             <View>
                 <Text>Set Location here</Text>
             </View>
-	    <Map/>
         );
     }
 }

@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {FETCH_PLACES_PENDING, FETCH_PLACES_SUCCESS, FETCH_PLACES_ERROR} from '../actions/actions_v1';
 
-const intialState = {
+export const intialState = {
 	pending : false,
 	products : [],
 	error : null
 };
 
-export function reducer(state = initialState, action){
+function placesReducer(action = {}, state = initialState){
 	switch(action.type){
 		case FETCH_PLACES_PENDING:
 			return {
@@ -27,9 +27,11 @@ export function reducer(state = initialState, action){
 				error : action.error
 			};
 		default:
-			return state;
+			return {state};
 	}
 }
+
+export default placesReducer;
 
 export const getPlaces = state => state.products;
 export const getPlacesPending = state => state.pending;
